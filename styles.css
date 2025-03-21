@@ -1,0 +1,42 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3e5f5; /* Light purple background */
+    color: #4a148c; /* Dark purple text */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    background-color: #7b1fa2; /* Medium purple for the navbar */
+    overflow: hidden;
+    padding: 10px;
+}
+
+/* Navbar button styling */
+.navbar button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for navbar buttons */
+.navbar button:hover {
+    background-color: #4a148c; /* Darker purple on hover */
+}
+
+/* Content section styling */
+.content {
+    padding: 20px;
+}
+
+/* Heading styling */
+h1, h2 {
+    color: #4a148c; /* Consistent dark purple for headings */
+}
