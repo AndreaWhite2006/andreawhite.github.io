@@ -4,26 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OAmaths</title>
-    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="styles.css">
     <script>
         function navigateTo(page) {
             window.location.href = page;
         }
+
+        function toggleTopics() {
+            const topicsContainer = document.getElementById('topics-container');
+            if (topicsContainer.style.display === 'none' || topicsContainer.style.display === '') {
+                topicsContainer.style.display = 'block';
+            } else {
+                topicsContainer.style.display = 'none';
+            }
+        }
     </script>
 </head>
 <body>
-
     <div class="navbar">
         <button onclick="navigateTo('maths.html')">Maths</button>
         <button onclick="navigateTo('computer-science.html')">Computer Science</button>
         <button onclick="navigateTo('further-maths.html')">Further Maths</button>
+        <div class="navbar-title">OAmaths</div>
     </div>
 
     <div class="content">
         <h1>Welcome to OAmaths</h1>
         <h2>Designed by students, for students</h2>
-    </div>
+        <div class="level-selection">
+            <button class="level-button" onclick="navigateTo('gcse.html')">GCSE</button>
+            <button class="level-button" onclick="toggleTopics()">A-Level</button>
+        </div>
 
+        <!-- New Topics Section -->
+        <div id="topics-container" class="topics-container" style="display: none;">
+            <h2>A-Level Maths Topics</h2>
+            <button class="topic-button" onclick="navigateTo('proof.html')">Proof</button>
+            <button class="topic-button" onclick="navigateTo('algebra-functions.html')">Algebra & Functions</button>
+            <button class="topic-button" onclick="navigateTo('coordinate-geometry.html')">Coordinate Geometry</button>
+            <button class="topic-button" onclick="navigateTo('sequences-series.html')">Sequences & Series</button>
+            <button class="topic-button" onclick="navigateTo('trigonometry.html')">Trigonometry</button>
+            <button class="topic-button" onclick="navigateTo('exponentials-logarithms.html')">Exponentials & Logarithms</button>
+            <button class="topic-button" onclick="navigateTo('differentiation.html')">Differentiation</button>
+            <button class="topic-button" onclick="navigateTo('integration.html')">Integration</button>
+            <button class="topic-button" onclick="navigateTo('numerical-methods.html')">Numerical Methods</button>
+            <button class="topic-button" onclick="navigateTo('vectors.html')">Vectors</button>
+            <button class="topic-button" onclick="navigateTo('mechanics.html')">Mechanics</button>
+            <button class="topic-button" onclick="navigateTo('kinematics.html')">Kinematics</button>
+            <button class="topic-button" onclick="navigateTo('forces.html')">Forces & Newton’s Laws</button>
+            <button class="topic-button" onclick="navigateTo('moments.html')">Moments</button>
+            <button class="topic-button" onclick="navigateTo('statistics.html')">Statistics</button>
+            <button class="topic-button" onclick="navigateTo('data-presentation.html')">Data Presentation</button>
+            <button class="topic-button" onclick="navigateTo('probability.html')">Probability</button>
+            <button class="topic-button" onclick="navigateTo('statistical-distributions.html')">Statistical Distributions</button>
+            <button class="topic-button" onclick="navigateTo('statistical-hypothesis-testing.html')">Statistical Hypothesis Testing</button>
+        </div>
+    </div>
 </body>
 </html>
